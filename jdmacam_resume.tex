@@ -1,0 +1,183 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.3, 10 May 2020) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 and academicon fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Layout of the page
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{LightBlue}{HTML}{3c7bba}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{555555}
+\definecolor{Black}{HTML}{000000}
+\colorlet{tagline}{Black}
+\colorlet{heading}{Black}
+\colorlet{headingrule}{LightBlue}
+\colorlet{accent}{LightBlue}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\begin{document}
+\name{Joseph Macam}
+\personalinfo{
+  \email{jdmacam@gmail.com}
+  \phone{(951) 252 7203}
+  \location{Chico, CA}
+  \linkedin{jdmacam}
+  \github{jdmacam}
+}
+
+\makecvheader
+
+%% Make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.5}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+% EDUCATION -------------------------------------
+\cvsection{Education}
+
+\cvevent{California State University Chico}{B.S. in Computer Science}{Graduation: December 2021}{}
+\begin{itemize}
+    \item \underline{\textbf{Status}}: Senior \underline{\textbf{GPA}}: 3.628
+    \item \textbf{Dean's Honor List - Fall 2020}
+%    \item \textbf{Current Coursework}: Shell Programming | Usability Engineering | Numerical and Parallel Programming | Probability/Statistics for Science \& Technology
+%    \item \textbf{Past Coursework}: Software Engineering | Computer Security | Artificial Intelligence | Operating Systems | Compiler Design | Databases | Computer Networks | Algorithm Design \& Analysis | Adv. Object-Oriented Programming.
+\end{itemize}
+\cvevent{Palomar College}{A.S. in University Studies - Math and Science }{Graduation: 2017}
+
+\cvevent{Palomar College}{A.S. in General Studies - Science and Mathematics}{Graduation: 2017}
+
+% WORK EXPERIENCE -------------------------------
+\cvsection{Work Experience}
+
+\cvevent{Computer Science Lab Assistant/Volunteer}{California State University Chico}{01/2019 - Present}{}
+\begin{itemize}
+    \item Assisted students in debugging their assignments \& demonstrating debugging methods in C++. Tutored introductory programming fundamentals with students in C++, such as pass-by-reference vs. pass-by-value and variable scope
+\end{itemize}
+\divider
+
+\cvevent{Back of House Shift Lead}{Epic Wings}{05/2013 - 08/2018}{}
+\begin{itemize}
+    \item Supervised kitchen staff and food quality
+    \item Trained new back of house employees
+    \item Receive and inventory supply truck deliveries
+    \item Handled customer inquiries related to food preparation
+\end{itemize}
+
+% CLUBS & ORGANIZATIONS --------------------------------
+\cvsection{Clubs \& Organizations}
+
+\begin{itemize}
+    \item \underline{\textbf{Upsilon Pi Epsilon Honor Society}} - Chico State Chapter
+    \begin{itemize}
+        \item \textbf{Officer (Secretary)}
+    \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+    \item \underline{\textbf{Usr0}} - Chico State Computer Security Club
+\end{itemize}
+
+\begin{itemize}
+    \item \underline{\textbf{ACM}} - Chico State Chapter
+\end{itemize}
+
+\begin{itemize}
+    \item \underline{\textbf{ACM-W}} - Chico State Chapter
+\end{itemize}
+
+\begin{itemize}
+    \item \underline{\textbf{Phi Theta Kappa Honor Society}} - Palomar College Chapter
+\end{itemize}
+
+
+% RIGHT COLUMN --------------------------------------
+\switchcolumn
+
+% TECHNICAL SKILLS ----------------------------------
+\cvsection{Skills}
+
+\begin{itemize}
+    \item Over 3 years of \textbf{C++} and  \textbf{Python} experience through coursework
+    \item Gold Bracket (Top 15\%) in \textbf{National Cyber League Fall Season 2020 Preseason} 
+    \item \textbf{Agile practices} through Software Engineering course, including Scrums, Sprints, User Stories, and Kanban Board
+    \item \textbf{Unit} testing with Travis CI and Coveralls through Software Engineering coursework
+    \item \textbf{Shared-memory and Direct-memory Parallel programming} with OpenMP, POSIX Threads, and MPI.
+    \item Strong leadership skills with experience training/teaching others
+    \item \textbf{Programming Languages}: C and C++, Python, SQL, Java, Bash, R
+\end{itemize}
+
+% PROJECTS ------------------------------------------
+\cvsection{Projects}
+
+\cvevent{FamNet}{Software Engineering Group Project}{01/2020 - 05/2020}{}
+\small A social media mobile app catered towards families.
+\begin{itemize}
+    \item Role: Flutter Developer/Scrum Master
+    \item Languages: Dart
+    \item Developed for Android using Flutter
+    \item Utilizes Google Firebase
+    \item Development utilized Agile software development practices such as a Kanban board, Scrum meetings, and Sprints
+\end{itemize}
+\divider
+
+\cvevent{Wumpus World}{Artificial Intelligence project}{08/2019 - 12/2019}{}
+\small A logical agent program to solve a Wumpus World problem.
+\begin{itemize}
+    \item Languages: C++
+    \item Utilized knowledge base matrices and propositional logic rules
+\end{itemize}
+
+
+
+
+\end{paracol}
+
+\end{document}
+
